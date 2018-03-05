@@ -27,6 +27,7 @@ public class Main {
         System.out.println(scoreA.toString());
         */
         firstGoodTest();
+        lastProductTest();
     }
 
     public static void firstGoodTest(){
@@ -88,5 +89,36 @@ public class Main {
         System.out.println(Score.getScore(rightV1,source,brandName,categoryName));
         System.out.println(Score.getScore(rightV6,source,brandName,categoryName).toString());
         System.out.println(Score.getScore(anotherPr,source,brandName,categoryName).toString());
+    }
+
+    public static void lastProductTest(){
+        System.out.println("Last product test: ");
+        String source = "Ультразвуковой увлажнитель Cooper&Hunter CH-800-1 BD";
+        String brand = "";
+        String category = "Ультразвуковые увлажнители";
+        String rightName1 = "Ультразвуковой увлажнитель Cooper&Hunter CH-800-1 (BD)";
+        String rightName2="Ультразвуковой увлажнитель Cooper&Hunter CH-8OO-1 (BD)";
+        String rightName3 = "Увлажнитель Cooper Hunter CH-800-1 (BD)";
+
+
+        String falseName1 = "Ультразвуковой увлажнитель Cooper&Hunter CH-810-1 (BD)";
+        String falseName2 = "Ультразвуковой увлажнитель Cooper&Hunter CH-8OO-1 (CA)";
+        String falseName3="Увлажнитель Cooper  CH-800-1 (BD)";
+
+        Integer score1Right = Score.getScore(rightName1,source,brand,category);
+        Integer score2Right=Score.getScore(rightName2,source,brand,category);
+        Integer score3Right=Score.getScore(rightName3,source,brand,category);
+
+        Integer score1False = Score.getScore(falseName1,source,brand,category);
+        Integer score2False = Score.getScore(falseName2,source,brand,category);
+        Integer score3False = Score.getScore(falseName3,source,brand,category);
+
+        System.out.println(score1Right.toString());
+        System.out.println(score2Right.toString());
+        System.out.println(score3Right.toString());
+        System.out.println("False: " );
+        System.out.println(score1False.toString());
+        System.out.println(score2False.toString());
+        System.out.println(score3False.toString());
     }
 }

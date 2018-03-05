@@ -9,24 +9,24 @@ public class SortContainsBrand {
             for (int j = 0; j < sourceArray.length; j++) {
                 for (int k = 0; k < brandArray.length; k++) {
                     if ((searchArray[i] == sourceArray[j] && brandArray[k] == sourceArray[j]) && i == j && k == j) {
-                        resultScore = resultScore + 7;
+                        resultScore = resultScore + 10;
                     } else if ((searchArray[i] == sourceArray[j] && brandArray[k] == sourceArray[j]) && i == j || k == j) {
-                        resultScore = resultScore + 6;
+                        resultScore = resultScore + 8;
                     }
                     else if((Character.toUpperCase(searchArray[i]) == Character.toUpperCase(sourceArray[j]) && Character.toUpperCase(brandArray[k]) == Character.toUpperCase(sourceArray[j])) && i == j && k == j) {
-                        resultScore = resultScore + 5;
+                        resultScore = resultScore + 3;
                     }
                     else if((Character.toUpperCase(searchArray[i]) == Character.toUpperCase(sourceArray[j]) && Character.toUpperCase(brandArray[k]) == Character.toUpperCase(sourceArray[j])) && i == j || k == j) {
-                        resultScore = resultScore + 4;
+                        resultScore = resultScore + 2;
                     }
 
                     else if (searchArray[i] == sourceArray[j] && brandArray[k] == sourceArray[j]) {
-                        resultScore = resultScore + 3;
-                    }
+                        resultScore = resultScore + 1;
+                    }/*
                     else if(Character.toUpperCase(searchArray[i]) == Character.toUpperCase(sourceArray[j]) && Character.toUpperCase(brandArray[k]) == Character.toUpperCase(sourceArray[j])) {
                         resultScore = resultScore + 2;
                     }
-                   /* else if(Character.toUpperCase(brandArray[k]) == Character.toUpperCase(sourceArray[j])) {
+                    else if(Character.toUpperCase(brandArray[k]) == Character.toUpperCase(sourceArray[j])) {
                         resultScore = resultScore + 1;
                     }*/
                 }

@@ -12,10 +12,10 @@ public class BonusScoreForNumber {
                     resultScore = resultScore +20;
                 }
                 else if(Character.isDigit(searchArray[i])&&searchArray[i]!=sourceArray[j]&&i==j){
-                    resultScore = resultScore - 50;
+                    resultScore = resultScore - 10;
                 }
-                else if(Character.isDigit(searchArray[i])&&searchArray[i]!=sourceArray[j]){
-                    resultScore = resultScore -30;
+                else if(Character.isDigit(searchArray[i])&&Character.isDigit(sourceArray[j])&&searchArray[i]!=sourceArray[j]){
+                    resultScore = resultScore -5;
                 }
             }
         }
