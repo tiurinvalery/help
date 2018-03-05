@@ -26,9 +26,9 @@ public class SortContainsBrand {
                     else if(Character.toUpperCase(searchArray[i]) == Character.toUpperCase(sourceArray[j]) && Character.toUpperCase(brandArray[k]) == Character.toUpperCase(sourceArray[j])) {
                         resultScore = resultScore + 2;
                     }
-                    else if(Character.toUpperCase(brandArray[k]) == Character.toUpperCase(sourceArray[j])) {
+                   /* else if(Character.toUpperCase(brandArray[k]) == Character.toUpperCase(sourceArray[j])) {
                         resultScore = resultScore + 1;
-                    }
+                    }*/
                 }
             }
         }

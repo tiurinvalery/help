@@ -19,9 +19,9 @@ public class SortContainsCategory {
                         resultScore = resultScore + 3;
                     } else if (Character.toUpperCase(searchArray[i]) == Character.toUpperCase(sourceArray[j]) && Character.toUpperCase(categoryArray[k]) == Character.toUpperCase(sourceArray[j])) {
                         resultScore = resultScore + 2;
-                    } else if (Character.toUpperCase(categoryArray[k]) == Character.toUpperCase(sourceArray[j])) {
+                    } /*else if (Character.toUpperCase(categoryArray[k]) == Character.toUpperCase(sourceArray[j])) {
                         resultScore = resultScore + 1;
-                    }
+                    }*/
                 }
             }
         }
